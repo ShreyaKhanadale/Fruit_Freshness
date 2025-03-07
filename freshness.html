@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Freshness Monitoring</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="freshness.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">FreshTrackPro</a>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a>
+        <a href="analytics.html"><i class="fas fa-chart-bar"></i> Analytics</a>
+        <a href="freshness.html"><i class="fas fa-seedling"></i> Freshness Check</a>
+        <a href="chart.html"><i class="fas fa-chart-pie"></i> Chart</a>
+        <div class="logout" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</div>
+    </div>
+
+    <h2>Fruit Freshness Monitoring</h2>
+
+    <!-- Freshness Data Table -->
+    <div class="freshness-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Product Name</th>
+                    <th>Temperature (°C)</th>
+                    <th>Humidity (%)</th>
+                    <th>Ethylene (ppm)</th>
+                    <th>VOCs (ppm)</th>
+                    <th>CO₂ (ppm)</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="freshnessTable">
+                <!-- Data will be inserted dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Graph Containers -->
+    <div class="graph-container"><canvas id="tempChart"></canvas></div>
+    <div class="graph-container"><canvas id="humidityChart"></canvas></div>
+    <div class="graph-container"><canvas id="gasChart"></canvas></div>
+
+    <script src="freshness.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+/* style.css */
+body { padding-top: 56px; display: flex; }
+.sidebar { width: 250px; background-color: #2c3e50; color: white; position: fixed; top: 56px; left: 0; height: calc(100vh - 56px); padding-top: 20px; overflow-y: auto; }
+.sidebar a, .sidebar .logout { padding: 15px; display: block; color: white; text-decoration: none; transition: 0.3s; cursor: pointer; }
+.sidebar a:hover, .sidebar .logout:hover { background-color: #34495e; }
+.content { margin-left: 250px; padding: 20px; flex-grow: 1; }
+.dashboard-card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); text-align: center; }
+.temperature { background: #d4eaff; color: #0066cc; }
+.humidity { background: #dfffe0; color: #228b22; }
+.gas { background: #ffe5d4; color: #cc5500; }
+.stock-overview { margin-top: 50px; }
+

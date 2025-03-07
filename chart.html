@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshnessTrackPro Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="chart.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   
+</head>
+<body>
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">FreshTrackPro</a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a>
+    <a href="Analytics.html"><i class="fas fa-chart-bar"></i> Analytics</a>
+    <a href="freshness.html"><i class="fas fa-seedling"></i> Freshness Check</a>
+    <a href="chart.html"><i class="fas fa-chart-pie"></i> Chart</a>
+    <div class="logout" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</div>
+</div>
+
+<!-- Main Content -->
+    <div class="main-content">
+        <h2 class="text-center">Sensor Data Visualization</h2>
+        <div class="chart-container"><canvas id="temperatureChart"></canvas></div>
+        <div class="chart-container"><canvas id="humidityChart"></canvas></div>
+        <div class="chart-container"><canvas id="ethyleneChart"></canvas></div>
+        <div class="chart-container"><canvas id="vocChart"></canvas></div>
+        <div class="chart-container"><canvas id="co2Chart"></canvas></div>
+    </div>
+
+    <script src="chart.js"></script>
+</body>
+</html>

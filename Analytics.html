@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshness Monitoring</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Analytics.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">FreshTrackPro</a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="admin.html"><i class="fas fa-user-shield"></i> Admin</a>
+        <a href="Analytics.html"><i class="fas fa-chart-bar"></i> Analytics</a>
+        <a href="freshness.html"><i class="fas fa-seedling"></i> Freshness Check</a>
+        <a href="chart.html"><i class="fas fa-chart-pie"></i> Chart</a>
+        <div class="logout" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h2>Freshness Monitoring - Live Sensor Data</h2>
+        <div class="sensor-container">
+            <div class="sensor-box temperature">
+                <p>Temperature (DHT22)</p>
+                <p id="temp">--°C</p>
+            </div>
+            <div class="sensor-box humidity">
+                <p>Humidity (DHT22)</p>
+                <p id="humidity">--%</p>
+            </div>
+            <div class="sensor-box ethylene">
+                <p>Ethylene (MiCS-5524)</p>
+                <p id="ethylene">-- ppm</p>
+            </div>
+            <div class="sensor-box vocs">
+                <p>VOCs (CCS811)</p>
+                <p id="vocs">-- ppm</p>
+            </div>
+            <div class="sensor-box co2">
+                <p>CO₂ (MH-Z19)</p>
+                <p id="co2">-- ppm</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="Analytics.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
