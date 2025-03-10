@@ -6,7 +6,10 @@ body { padding-top: 56px; display: flex; }
 .content { margin-left: 250px; padding: 20px; flex-grow: 1; }
 .dashboard-card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); text-align: center; }
 .temperature { background: #d4eaff; color: #0066cc; }
-.humidity { background: #dfffe0; color: #228b22; }
+.humidity { background: #ffe5d4; color: #228b22; }
 .gas { background: #ffe5d4; color: #cc5500; }
 .stock-overview { margin-top: 50px; }
 
+ /* .temperature { background: #d4eaff; color: #0066cc; }
+.humidity { background: #dfffe0; color: #228b22; }
+.gas { background: #ffe5d4; color: #cc5500; } */ 

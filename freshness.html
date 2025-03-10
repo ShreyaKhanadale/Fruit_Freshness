@@ -22,7 +22,7 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -59,7 +59,7 @@
                 </tr>
             </thead>
             <tbody id="freshnessTable">
-                <!-- Data will be inserted dynamically -->
+                <!-- Data will be inserted dynamically, ensuring only 'Fresh' or 'Spoiled' status is included -->
             </tbody>
         </table>
     </div>
@@ -70,5 +70,10 @@
     <div class="graph-container"><canvas id="gasChart"></canvas></div>
 
     <script src="freshness.js"></script>
+    <script>
+        function getStatus(ethylene) {
+            return ethylene < 2 ? '<span class="status good">Fresh</span>' : '<span class="status bad">Spoiled</span>';
+        }
+    </script>
 </body>
 </html>
